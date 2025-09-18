@@ -1,0 +1,146 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Enrollment System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="#" onclick="showSection('students', this)" class="active">Students</a></li>
+        <li><a href="#" onclick="showSection('programs', this)">Programs</a></li>
+        <li><a href="#" onclick="showSection('years', this)">Years</a></li>
+        <li><a href="#" onclick="showSection('semesters', this)">Semesters</a></li>
+        <li><a href="#" onclick="showSection('subjects', this)">Subjects</a></li>
+        <li><a href="#" onclick="showSection('enrollments', this)">Enrollments</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+   
+    <div id="students" class="section">
+      <div class="section-header">
+        <h2>Students Management</h2>
+        <div class="btn-container">
+          <button onclick="showForm('students')">Add Student</button>
+        </div>
+      </div>
+
+      <div style="margin:10px 0;">
+        <label>Search: <input type="text" id="searchStudent" placeholder="Search by name..."></label>
+        <label>Filter by Program:
+          <select id="filterProgram"></select>
+        </label>
+      </div>
+
+      <table id="tblStudents">
+        <thead>
+          <tr>
+            <th>ID</th><th>First Name</th><th>Middle Name</th><th>Last Name</th>
+            <th>Program</th><th>Allowance</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="programs" class="section" style="display:none;">
+      <div class="section-header">
+        <h2>Programs Management</h2>
+        <div class="btn-container">
+          <button onclick="showForm('program')">Add Program</button>
+        </div>
+      </div>
+
+      <table id="tblPrograms">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Institute ID</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    
+    <div id="years" class="section" style="display:none;">
+      <div class="section-header">
+        <h2>Years Management</h2>
+        <div class="btn-container">
+          <button onclick="showForm('year')">Add Year</button>
+        </div>
+      </div>
+
+      <table id="tblYears">
+        <thead>
+          <tr><th>ID</th><th>From</th><th>To</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    
+    <div id="semesters" class="section" style="display:none;">
+      <div class="section-header">
+        <h2>Semesters Management</h2>
+        <div class="btn-container">
+          <button onclick="showForm('semester')">Add Semester</button>
+        </div>
+      </div>
+
+      <table id="tblSemesters">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Year ID</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+   
+    <div id="subjects" class="section" style="display:none;">
+      <div class="section-header">
+        <h2>Subjects Management</h2>
+        <div class="btn-container">
+          <button onclick="showForm('subject')">Add Subject</button>
+        </div>
+      </div>
+
+      <table id="tblSubjects">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Semester ID</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+   
+    <div id="enrollments" class="section" style="display:none;">
+      <div class="section-header">
+        <h2>Enrollments</h2>
+        <div class="btn-container">
+          <button onclick="showForm('enrollment')">Add Enrollment</button>
+        </div>
+      </div>
+
+      <table id="tblEnrollments">
+        <thead>
+          <tr><th>ID</th><th>Student</th><th>Subject</th><th>Semester</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+   
+    <div id="modal">
+      <div id="modalContent">
+        <h3 id="modalTitle"></h3>
+        <form id="mainForm"></form>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
