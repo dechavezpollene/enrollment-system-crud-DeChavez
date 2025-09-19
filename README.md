@@ -30,6 +30,25 @@ Stretch goals not implemented – Pagination, spinners, and more advanced valida
 
 #Setup Instructions
 1. Requirements
--XAMPP Control Panel v3.3.0 (Compiled: Apr 6th 2021)
--Includes Apache, PHP, and MySQL/MariaDB.
--A modern browser (Chrome, Edge, Firefox recommended).
+-XAMPP Control Panel v3.3.0 (Compiled: Apr 6, 2021)
+-Includes Apache, PHP, and MySQL/MariaDB
+-A modern browser (Chrome, Edge, or Firefox recommended)
+
+2. Steps to Run the Project
+-Clone or download this project into your htdocs folder inside XAMPP.
+-Start XAMPP and run Apache and MySQL.
+-Import the database:
+-Open http://localhost/phpmyadmin
+-Create a new database (e.g., enrollment_db)
+-Import the provided .sql file inside the project folder.
+-Configure PHP connection:
+    -Open the config.php (or equivalent) file.
+
+-Update the database name, username, and password if necessary.
+$host = "localhost";
+$dbname = "enrollment_db";
+$username = "root";
+$password = "";
+
+-Run the project:
+-Open your browser and go to based on your path
